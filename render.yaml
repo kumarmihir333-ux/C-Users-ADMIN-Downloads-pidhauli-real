@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: pidhauli
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --preload --workers 2 --bind 0.0.0.0:$PORT wsgi:app
+    healthCheckPath: /healthz
+    disk:
+      name: pidhauli-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DATA_DIR
+        value: /var/data
+      - key: FLASK_SECRET_KEY
+        generateValue: true
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_NAME
+        sync: false
+      - key: OPENWEATHER_API_KEY
+        sync: false

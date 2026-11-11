@@ -1,0 +1,57 @@
+        <section class="satellite">
+          <div class="sat-head">
+            <div>
+              <h3 class="sat-title">Market map</h3>
+              <p>Gold pin: Sudha Milk Dairy, Pidhauli · coral pin: your device</p>
+            </div>
+            <div class="layer-switch">
+              <button class="active" data-layer="satellite" type="button">Satellite</button>
+              <button data-layer="streets" type="button">Streets</button>
+              <button id="locateDevice" type="button">◎ Use my device location</button>
+            </div>
+          </div>
+          <div class="measure-tools">
+            <div class="measure-actions">
+              <button id="startMeasure" type="button">＋ Measure land</button>
+              <button id="undoMeasure" type="button" disabled>Undo point</button>
+              <button id="finishMeasure" type="button" disabled>Finish boundary</button>
+              <button id="clearMeasure" type="button" disabled>Clear</button>
+              <button id="checkSatellite" type="button" disabled>Compare seasons</button>
+            </div>
+            <span id="measureInstructions" role="status">Start measuring, then click corners or press and drag along the field edge.</span>
+            <small class="satellite-privacy">Analysis sends this boundary to Microsoft Planetary Computer and its center/date range to Open-Meteo. This app saves field data only when you choose “Save field + analysis” while signed in.</small>
+          </div>
+          <div id="measureResult" class="measure-result" hidden aria-live="polite">
+            <div><strong id="areaAcres">0</strong><span>acres</span></div>
+            <div><strong id="areaHectares">0</strong><span>hectares</span></div>
+            <div><strong id="areaSqm">0</strong><span>m²</span></div>
+            <small id="measureNote">Area is estimated from the boundary you draw.</small>
+          </div>
+          <div id="satelliteResult" class="satellite-result" hidden aria-live="polite">
+            <strong id="satelliteTitle"></strong>
+            <span id="satelliteDetails"></span>
+            <svg id="ndviChart" class="ndvi-chart" role="img" aria-label="Sentinel-2 NDVI timeline" hidden></svg>
+            <div id="ndviLegend" class="ndvi-legend"></div>
+            <div class="field-save-tools">
+              <label for="fieldName">Save field and this analysis</label>
+              <input id="fieldName" maxlength="80" placeholder="Field name (e.g. North plot)" />
+              <button id="saveFieldAnalysis" type="button" disabled>Save field + analysis</button>
+              <select id="savedFieldSelect" aria-label="Saved fields">
+                <option value="">Your saved fields</option>
+              </select>
+              <button id="loadSavedField" type="button" disabled>Load field</button>
+              <span id="fieldSaveStatus" role="status">Sign in to save fields and analysis history.</span>
+            </div>
+            <div id="savedAnalysisHistory" class="saved-analysis-history"></div>
+            <a id="satellitePreview" href="#" target="_blank" rel="noopener noreferrer" hidden>Open Sentinel-2 preview ↗</a>
+          </div>
+          <div class="map-wrap">
+            <div id="map" aria-label="Agricultural market map"></div>
+            <div id="mapStatus" class="map-status">Loading market geography…</div>
+          </div>
+          <div class="map-footer">
+            <span>Market layer: India supply atlas</span>
+            <span id="mapStatusFooter">Sudha Milk Dairy · 25.5302806, 85.9195789</span>
+          </div>
+        </section>
+

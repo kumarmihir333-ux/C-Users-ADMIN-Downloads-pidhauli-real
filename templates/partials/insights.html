@@ -1,0 +1,24 @@
+        <section class="section insights-section" id="myInsights">
+          <div class="section-head">
+            <div>
+              <div class="section-kicker">Personalized analytics</div>
+              <h2 class="section-title">My market insights</h2>
+            </div>
+            <div class="section-desc">Private insights from your watchlist and inquiries, paired with current buyer demand.</div>
+          </div>
+          <div class="insights-card">
+            <div class="insights-toolbar">
+              <p id="insightStatus" role="status">Sign in to see insights for your account.</p>
+              <button id="refreshInsights" type="button">↻ Refresh</button>
+            </div>
+            <div class="insight-metrics">
+              <div><span>WATCHED CROPS</span><strong id="insightWatchCount">—</strong></div>
+              <div><span>YOUR INQUIRIES</span><strong id="insightInquiryCount">—</strong></div>
+              <div><span>WATCHLIST AVG. MOVE</span><strong id="insightAverageChange">—</strong></div>
+            </div>
+            <div id="insightRows" class="insight-list"></div>
+            <small class="insight-disclaimer">Model: simple linear regression on recorded prices only; shown when at least three distinct observations exist. Estimates are experimental, not financial advice.</small>
+          </div>
+        </section>
+
+

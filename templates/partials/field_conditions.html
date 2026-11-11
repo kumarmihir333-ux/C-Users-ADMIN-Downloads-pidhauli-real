@@ -1,0 +1,54 @@
+        <section class="below">
+          <div class="panel">
+            <div class="panel-top">
+              <h3 class="panel-title">Field conditions</h3>
+              <span class="panel-label">BEGUSARAI · BIHAR</span>
+            </div>
+            <div class="weather">
+              <div>
+                <div class="weather-place">PIDHAULI · LIVE CONDITIONS</div>
+                <div class="temp" id="weatherTemp">—°</div>
+              </div>
+              <div class="sun" id="weatherIcon" aria-hidden="true">◉</div>
+            </div>
+            <div class="weather-detail">
+              <span>CONDITIONS<b id="weatherCondition">Loading…</b></span>
+              <span>HUMIDITY<b id="weatherHumidity">—</b></span>
+              <span>WIND<b id="weatherWind">—</b></span>
+            </div>
+            <div class="forecast" id="forecast">
+              <div class="forecast-day">Fetching<br />forecast</div>
+            </div>
+            <div class="weather-tools-line">
+              <span class="weather-state" id="weatherState">Connecting to OpenWeather…</span>
+              <div class="weather-tools">
+                <button id="refreshWeather" type="button">↻ Refresh</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-top">
+              <h3 class="panel-title">Buyer demand</h3>
+              <span class="panel-label">LIVE NEEDS</span>
+            </div>
+            <div id="sideDemand"></div>
+            <div class="demand-table-wrap">
+              <table class="commodity-table demand-table">
+                <thead>
+                  <tr>
+                    <th>Commodity</th>
+                    <th>Qty</th>
+                    <th>Place</th>
+                    <th>Delivery</th>
+                    <th>Quality</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="demandRows"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+

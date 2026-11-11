@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pidhauli — Agricultural trade, rooted in India</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <div class="shell">
+{% include 'partials/navigation.html' %}{% include 'partials/dialogs.html' %}      <main>
+{% include 'partials/hero.html' %}{% include 'partials/ticker.html' %}{% include 'partials/commodities.html' %}{% include 'partials/field_conditions.html' %}{% include 'partials/insights.html' %}{% include 'partials/map.html' %}      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script>{% include 'partials/scripts/01-dashboard-data.js' %}{% include 'partials/scripts/02-market-map.js' %}{% include 'partials/scripts/03-field-measurement.js' %}{% include 'partials/scripts/04-satellite-analysis.js' %}{% include 'partials/scripts/05-map-interactions.js' %}</script>
+  </body>
+</html>

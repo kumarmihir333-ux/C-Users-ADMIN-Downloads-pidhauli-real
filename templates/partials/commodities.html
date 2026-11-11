@@ -1,0 +1,39 @@
+        <section class="section" id="commodities">
+          <div class="section-head">
+            <div>
+              <div class="section-kicker">Commodities</div>
+              <h2 class="section-title">Indicative price atlas</h2>
+            </div>
+            <div class="section-desc">Compare mandi pricing, crop movement, and live buyer demand.</div>
+          </div>
+
+          <div class="board">
+            <div class="controls">
+              <span class="control-label">Commodity</span>
+              <button class="chip active" data-filter="All" type="button">All crops</button>
+              <button class="chip" data-filter="Grain" type="button">Grains</button>
+              <button class="chip" data-filter="Vegetable" type="button">Vegetables</button>
+              <button class="chip" data-filter="Pulse" type="button">Pulses</button>
+              <label class="search" aria-label="Search crops">
+                ⌕
+                <input id="search" placeholder="Search commodity or mandi" />
+              </label>
+            </div>
+
+            <table class="commodity-table">
+              <thead>
+                <tr>
+                  <th>Crop</th>
+                  <th>Price</th>
+                  <th>Change</th>
+                  <th>Trend</th>
+                  <th>Market</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="cropRows"></tbody>
+            </table>
+          </div>
+        </section>
+
+
